@@ -44,14 +44,14 @@ for k in range(len(df)):
         if int(df['최대수용인원'][k]) > 10000:
             folium.Circle(
                 location= (df['위도(EPSG4326)'][k], df['경도(EPSG4326)'][k]),
-                tooltip=df['시설명'],
+                tooltip=df['시설명'][k],
                 radius=50,
                 color='green'
             ).add_to(m)
         else:
             folium.Circle(
                 location= (df['위도(EPSG4326)'][k], df['경도(EPSG4326)'][k]),
-                tooltip=df['시설명'],
+                tooltip=df['시설명'][k],
                 radius=50,
                 color='orange'
             ).add_to(m)
