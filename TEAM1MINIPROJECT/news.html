@@ -1,9 +1,13 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title></title>
 <link rel="stylesheet" href="css/style.css">
+
+	<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
 </head>
 <body>
     <!-- header -->
@@ -45,7 +49,6 @@
 			</ul>
 			<ul class="rightMenu">
 				<li><a href="join.html">명단등록</a></li>
-				<li><a href="login.html">로그인</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -55,36 +58,17 @@
     <section id="section8">
         <div class="container">
             <h1>뉴스</h1>
-            <div class="box">
-                <div class="image_box">
-                    <img src="warning.png" alt="" onclick="showDivs(1)">
-                </div>
-                <div class="des">
-                    공습경보 발령 서부전선 북한 포격으로 인해 서울/경기 북부 포격 위험 심화! 가까운 대피소로 대피할...
-                </div>
-            </div>
-            <div class="box">
-                <div class="image_box">
-                    <img src="warning.png" alt="" onclick="showDivs(2)">
-                </div>
-                <div class="des">
-                    화생방대피 명령 북한 포대 경기 북부 생화학 공격 개시
-                </div>
-            </div>
-            <div class="box">
-                <div class="image_box">
-                    <img src="warning.png" alt="" onclick="showDivs(3)">
-                </div>
-                <div class="des">
-                    국방부장관 '상공에 드론이 보인다면 신속히 대피후 신고'
-                </div>
-            </div>
-            <div class="box">
-                <div class="image_box">
-                    <img src="warning.png" alt="" onclick="showDivs(4)">
-                </div>
-                <div class="des">
-                    합참의장 '12시간 이내 서울 안전 확보 48시간 내 전면전 승리 예상'
+        <div>
+            <div class="news_section">
+                <div class="news_title"><h3>재난안전 상황정보</h3></div>
+                <div class="news_list">
+					<ul id="gen">
+						<li><span class="org">동래구</span><strong>2024/10/21 16:27:57</strong>금일 16시20분 호우예비특보 발표로 온천천, 수영강 산책로를 통제하오니 출입을 자제하여 주시고 안전사고에 유의바랍니다. url.kr/ici75f </li>
+						<li><span class="org">금정구</span><strong>2024/10/21 16:15:27</strong>오늘 16시 부산지역 호우예비특보 발표에 따라 16시20분부로 온천천 산책로를 전면 통제하오니, 출입을 금지하여 주시고 안전사고에 유의 바랍니다.</li>
+						<li><span class="org">강북구</span><strong>2024/10/21 16:07:13</strong>오늘 16:00시경 수유3동 지역이 정전되어 긴급 복구 중으로, 인근지역에 피해가 예상되오니 주민들께서는 안전사고에 유의하시기 바랍니다. </li>
+						<li><span class="org">한국수자원공사</span><strong>2024/10/21 14:00:05</strong>10월21일 17시부터 광동댐 비상방류로 하천수위 상승 예상. 하천주변에 계신 경우 안전한 곳으로 대피 바랍니다</li>
+						<li><span class="org">전북특별자치도</span><strong>2024/10/21 12:32:34</strong>오늘 전북 전주시 덕진구 팔복동3가 112번지 일원에  화재 발생. 차량은 건물 주변 도로를 우회하고, 건물 내 시민은 건물 밖으로 대피하세요. </li>
+					</ul>
                 </div>
             </div>
         </div>
@@ -117,32 +101,10 @@
         </div>
     </footer>
     <!-- //footer --> 
-    
-      <script>
-	    var slideIndex=0;
-		function plusDivs(n) {
-		  showDivs(slideIndex += n);
-		}
-		function showDivs(n) {
-		  var i;
-		  slideIndex = n;
-		  var x = document.getElementsByClassName("mySlides");
-		  if (n > x.length) {slideIndex = 1}    
-		  if (n < 1) {slideIndex = x.length} ;
-		  for (i = 0; i < x.length; i++) {
-		     x[i].style.display = "none";  
-		  }
-		  x[slideIndex-1].style.display = "block"; 
-		  
-		  document.getElementById("back").style.display="block";
-		  document.getElementById("popup").style.display="block";
-		}
-    
-		function closePopup(){
-			document.getElementById("back").style.display="none";
-			document.getElementById("popup").style.display="none";
-		}
-    </script>
+	<py-script scr="./new.py">
+
+
+    </py-script>
 </body>
 </html>
 
