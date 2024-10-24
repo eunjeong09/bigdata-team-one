@@ -37,16 +37,8 @@ issues[['latitude', 'longitude']] = issues['EMER_FACIL_LOC'].apply(lambda x: pd.
 
 # Drop rows with NaN values in latitude or longitude
 issues.dropna(subset=['latitude', 'longitude'], inplace=True)
-print(issues)
+
+# print(issues)
 # print(issues.loc[issues.CGG_NM=='중구'])
 
 
-# items = json.load(open('./data/서울시 민방위 비상급수시설현황.json','r',encoding='utf-8'))
-# path = open('.서울시 민방위 비상급수시설현황.json','r', encoding='utf-8').read()
-# mydata = json.loads(path)
-# print(mydata)
-# print(' ♟️ '*20)
-# for item in items:
-#     print(item['name'] + ' : ' + item['owner']['login'])
-
-# print()
