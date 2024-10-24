@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="board.html"> <img src="image/shleter.png" width="40" height="40"> 서울시 민방위대피소 </a>
+            </div>
+            <ul class="sidemenu">
+               <li><a href="board.html">Home</a></li> 
+               <li><a href="searchmap.html">Sitemap</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- //header -->
+    
+	<!-- nav --------------------------------------------- -->
+	<nav>
+		<div class="container">
+			<ul class="leftMenu">
+				<li class="dropBox">
+					<a href="">근처대피소</a>
+					<span class="dropmenu">
+						<span> <a href="searchmap.html">위치지도</a> </span>
+					</span>
+				</li>
+				<li class="dropBox">
+					실시간전황 
+					<span class="dropmenu"> 
+						<span><a href="news.html">뉴스 게시판</a></span> 
+					</span>
+				</li>
+				<li class="dropBox">
+					게시판 
+					<span class="dropmenu"> 
+						<span><a href="board.html">지원요청</a></span> 
+					</span>
+				</li>
+			</ul>
+			<ul class="rightMenu">
+				<li><a href="join.html">명단등록</a></li>
+				<li><a href="login.html">로그인</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- //nav -->
+	
+	<!-- section8 --------------------------------------------- -->
+    <section id="section8">
+        <div class="container">
+            <h1>뉴스</h1>
+            <div class="box">
+                <div class="image_box">
+                    <img src="warning.png" alt="" onclick="showDivs(1)">
+                </div>
+                <div class="des">
+                    공습경보 발령 서부전선 북한 포격으로 인해 서울/경기 북부 포격 위험 심화! 가까운 대피소로 대피할...
+                </div>
+            </div>
+            <div class="box">
+                <div class="image_box">
+                    <img src="warning.png" alt="" onclick="showDivs(2)">
+                </div>
+                <div class="des">
+                    화생방대피 명령 북한 포대 경기 북부 생화학 공격 개시
+                </div>
+            </div>
+            <div class="box">
+                <div class="image_box">
+                    <img src="warning.png" alt="" onclick="showDivs(3)">
+                </div>
+                <div class="des">
+                    국방부장관 '상공에 드론이 보인다면 신속히 대피후 신고'
+                </div>
+            </div>
+            <div class="box">
+                <div class="image_box">
+                    <img src="warning.png" alt="" onclick="showDivs(4)">
+                </div>
+                <div class="des">
+                    합참의장 '12시간 이내 서울 안전 확보 48시간 내 전면전 승리 예상'
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="clear"></div>
+    <!-- //section8 -->
+    
+    <div id="back"></div>
+    <div id="popup">
+        <div class="title">Picture Popup<span class="close" onclick="closePopup()">&times;</span></div>
+	    <div  class="large">
+			<div class="small">
+				<img class="mySlides" src="warning.png" alt="">
+				<img class="mySlides" src="warning.png" alt="">
+				<img class="mySlides" src="warning.png" alt="">
+				<img class="mySlides" src="warning.png" alt="">
+				
+				<a class="leftbtn" onclick="plusDivs(-1)">◀</a>
+				<a class="rightbtn" onclick="plusDivs(1)">▶</a>
+			</div>
+		</div>
+	</div>
+    
+    <!-- footer -->
+    <footer>    
+        <div class="container">
+            <div class="copyright">
+                (주) 서울 강남구 홍대입구  301호
+            </div>
+        </div>
+    </footer>
+    <!-- //footer --> 
+    
+      <script>
+	    var slideIndex=0;
+		function plusDivs(n) {
+		  showDivs(slideIndex += n);
+		}
+		function showDivs(n) {
+		  var i;
+		  slideIndex = n;
+		  var x = document.getElementsByClassName("mySlides");
+		  if (n > x.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = x.length} ;
+		  for (i = 0; i < x.length; i++) {
+		     x[i].style.display = "none";  
+		  }
+		  x[slideIndex-1].style.display = "block"; 
+		  
+		  document.getElementById("back").style.display="block";
+		  document.getElementById("popup").style.display="block";
+		}
+    
+		function closePopup(){
+			document.getElementById("back").style.display="none";
+			document.getElementById("popup").style.display="none";
+		}
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
