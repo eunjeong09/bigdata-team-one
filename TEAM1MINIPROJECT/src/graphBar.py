@@ -11,7 +11,7 @@ font_name = fm.FontProperties(fname=font_path).get_name()
 plt.rc('font', family=font_name)
 
 # CSV 파일 읽기
-csv_file_path = './src/tae/data/shelterInfo.csv'
+csv_file_path = './src/data/shelterInfo.csv'
 df = pd.read_csv(csv_file_path, encoding='euc-kr')
 
 # 그래프 크기 설정

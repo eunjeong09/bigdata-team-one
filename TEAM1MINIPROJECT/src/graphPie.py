@@ -1,4 +1,4 @@
-# 자치구별 사용중인 대피소 수량을 가로막대로 시각화
+# 자치구를 강북과 강남으로 나눠서 대피소 개수 비교
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -10,7 +10,7 @@ font_name = fm.FontProperties(fname=font_path).get_name()
 plt.rc('font', family=font_name)
 
 # CSV 파일 읽기
-csv_file_path = './src/tae/data/shelterInfo.csv'
+csv_file_path = './src/data/shelterInfo.csv'
 df = pd.read_csv(csv_file_path, encoding='euc-kr')
 
 # 강북과 강남 자치구 리스트
