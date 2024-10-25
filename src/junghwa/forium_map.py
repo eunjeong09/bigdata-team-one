@@ -22,19 +22,19 @@ if region_df['도로명전체주소'].notna().any():
             location = (float(region_df.loc[index,'위도(EPSG4326)']), float(region_df.loc[index,'경도(EPSG4326)']))
             name = str(region_df.loc[index,'시설명'])
             popup = folium.Popup(name + '\n' + str(region_df.loc[index,'시설면적(㎡)']) , min_width=50, max_width=200)
-            # Pass the entire row to color_select()
+            
+            # folium.CircleMarker(
+            #     location,
+            #     popup=popup,
+            #     radius= 400,
+            #     color='red',
+            #     fill_color='#EC4074').add_to(m)   
             folium.Marker(
                 location,
                 popup=popup,
                 tooltip=name,
-                icon=folium.Icon(icon='building',color = 'Green' ,prefix='fa') 
+                icon=folium.Icon(icon='building',color = 'lightgreen' ,prefix='fa') 
             ).add_to(m)
-            folium.CircleMarker(
-                location,
-                popup=popup,
-                radius='최대수용인원'*0.01,
-                color='red',
-                fill_color='#EC4074').add_to(m)   
 
     else:
         print(f"Warning: Skipping row {index} due to missing location data.")
