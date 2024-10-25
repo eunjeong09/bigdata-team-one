@@ -6,7 +6,7 @@ import matplotlib.font_manager as fm
 import seaborn as sns
 
 # 폰트
-font_path = '/Library/Fonts/Arial Unicode.ttf'
+font_path = './src/Fonts/Arial Unicode.ttf'
 font_name = fm.FontProperties(fname=font_path).get_name()
 plt.rc('font', family=font_name)
 
