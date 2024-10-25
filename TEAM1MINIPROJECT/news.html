@@ -35,20 +35,23 @@
 					</span>
 				</li>
 				<li class="dropBox">
+					대피소 차트 
+					<span class="dropmenu"> 
+						<span><a href="chart.html">대피소 차트</a></span> 
+					</span>
+				</li>
+				<li class="dropBox">
 					실시간전황 
 					<span class="dropmenu"> 
 						<span><a href="news.html">뉴스 게시판</a></span> 
 					</span>
 				</li>
 				<li class="dropBox">
-					게시판 
+					데이터베이스 관리 
 					<span class="dropmenu"> 
-						<span><a href="board.html">지원요청</a></span> 
+						<span><a href="table.html">ERD</a></span> 
 					</span>
 				</li>
-			</ul>
-			<ul class="rightMenu">
-				<li><a href="join.html">명단등록</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -70,6 +73,9 @@
 						<li><span class="org">전북특별자치도</span><strong>2024/10/21 12:32:34</strong>오늘 전북 전주시 덕진구 팔복동3가 112번지 일원에  화재 발생. 차량은 건물 주변 도로를 우회하고, 건물 내 시민은 건물 밖으로 대피하세요. </li>
 					</ul>
                 </div>
+				<div>
+					<img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fimgnews.pstatic.net%2Fimage%2Forigin%2F057%2F2024%2F10%2F24%2F1849203.jpg&type=f200_200&expire=2&refresh=true" alt="">
+				</div>
             </div>
         </div>
     </section>
@@ -92,19 +98,24 @@
 		</div>
 	</div>
     
-    <!-- footer -->
+
+    <!-- //footer --> 
+	<script>
+		myVal = ["하 나", "둘", "셋", "넷", "다섯", "여섯", "일곱"];
+		for (i = 1; i <= 7; i++) {
+			isBr = i == 7 ? "" : "<br>";
+			document.write("<input type=text id=my_" + i + " name=my_" + i + " value='" + myVal[i - 1] + "'>" + isBr);
+		}
+	</script>
+	
+	<!-- footer -->
     <footer>    
         <div class="container">
             <div class="copyright">
                 (주) 서울 강남구 홍대입구  301호
             </div>
         </div>
-    </footer>
-    <!-- //footer --> 
-	<py-script scr="./new.py">
-
-
-    </py-script>
+    </footer>	
 </body>
 </html>
 
