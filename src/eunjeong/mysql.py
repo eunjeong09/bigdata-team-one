@@ -10,7 +10,7 @@ from selenium.webdriver.chrome.options import Options
 config={
   'host' : '127.0.0.1' ,  
   'user' : 'root',
-  'password' : 'dmsWJD5!',
+  'password' : '1234',
   'database' : 'sys' ,
   'port' : 3306
 }
