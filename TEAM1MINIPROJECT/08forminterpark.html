@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 08forminterpark.html</title>
+
+    <style>
+        *{font-size: 14pt;}
+    </style>
+
+    <script>
+      //자바스크립트 주석
+      function myNull(){
+         var dtitle = myform.user_title.value ;
+         if( dtitle=="" || dtitle==null){
+            alert('제목데이터 입력하세요');
+            myform.user_title.focus()
+         }
+      }//end
+    </script>
+</head>
+<body>
+    
+<div  style="width: 900px;">
+    <h2> 회원등록 화면form </h2>
+    <div>
+     <form name="myform" action=""  method="get">
+        <fieldset>
+            <legend> 입력화면 testing </legend>
+            <div class="input_group">
+               <label for="user_title">제목:</label> 
+               <input type="text" name="user_title" id="user_title" placeholder="제목입력하세요">
+            </div>
+            <div class="input_group">
+                <label for="user_pwd">비번:</label> 
+                <input type="password" name="user_pwd" id="user_pwd" placeholder="비밀번호입력하세요">
+            </div>
+            <div class="input_group">
+                <label for=""> 성 별: </label>
+                <input type="radio" name="user_gender" id="user_gender" value="man" >남자
+                <input type="radio" name="user_gender" id="user_gender" value="woman">여자
+            </div>
+            <div class="input_group">
+                <label for=""> 취 미: </label>
+                <input type="checkbox" name="user_hobby" id="user_hobby" value="sports">운동
+                <input type="checkbox" name="user_hobby" id="user_hobby" value="movie">영화
+                <input type="checkbox" name="user_hobby" id="user_hobby" value="study" checked>공부
+                <input type="checkbox" name="user_hobby" id="user_hobby" value="trip">여행
+            </div>
+            <div class="input_group">
+                <label for=""> 직 업: </label>
+                <select name="user_job" id="user_job">
+                   <option value="">-----선택하세요------</option> 
+                   <option value="dev">프로그램개발자</option>
+                   <option value="coder">coder</option>
+                   <option value="webpub">웹퍼블리셔</option>
+                   <option value="dba">DB관리자</option>
+                </select>
+            </div>
+            <div class="input_group">
+                <label for=""> 예 약: </label>
+                <input type="datetime-local"  name="user_calendar" id="user_calendar">
+            </div>
+            <div class="input_group">
+                <label for=""> 파 일: </label>
+                <input type="file" placeholder="파일선택하세요">
+            </div>
+            
+            <label for=""> 메 모: </label>
+            <div class="">
+                <textarea rows="5" cols="30">Best Coffee</textarea>
+            </div> <p></p>
+
+            <p style="margin-top: 5px;"></p>
+            <div class="input_group">
+               <!-- submit는 폼태그 action속성문서와 연결 -->
+               <input type="button" value="submit" onclick="myNull()">
+               <input type="button" value="전송" onclick="myNull()">
+               <input type="reset"  value="입력취소">
+            </div>
+        </fieldset>
+     </form>
+    </div>
+</div> <!-- div align="center"  style="width: 900px;"  -->
+
+</body>
+</html>

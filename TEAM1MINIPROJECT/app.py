@@ -10,6 +10,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from flask import Flask, render_template
 def newsSearch(keyword):
+    
     url = f"https://search.naver.com/search.naver?sm=tab_hty.top&where=news&ssc=tab.news.all&query={keyword}&oquery=&tqi=ixNfxdpzL8VssDsUz28ssssssON-294837"
     resp = requests.get(url)
     html = resp.text
@@ -37,6 +38,7 @@ def newsSearch(keyword):
         else:
             cnt_plus = cnt_plus + 1
             date = news_date[k+cnt_plus].text
+            
         print('cnt :', k+1)
         print('제목 :', title)
         # print('내용 :', con)
@@ -49,11 +51,15 @@ def newsSearch(keyword):
     newsSearchDf = pd.DataFrame(resultList)
     return newsSearchDf
 app = Flask(__name__)
+
+
 @app.route("/")
 def home():
     # my_variable = "Hello, World!"
-    my_variable = newsSearch('민방위')
+    my_variable = newsSearch('재난')
     return render_template('index.html', my_variable=my_variable)
     # return render_template('news.html', my_variable=my_variable)
 if __name__ == '__main__':
     app.run(debug=True)
+
+    
