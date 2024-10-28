@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <title></title>
 <link rel="stylesheet" href="css/style.css">
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 </head>
-<body>
+<body  onload="myMap()">
     <!-- header -->
     <header>
         <div class="container">
@@ -14,12 +13,13 @@
                 <a href="board.html"> <img src="image/shleter.png" width="40" height="40"> 서울시 민방위대피소 </a>
             </div>
             <ul class="sidemenu">
-               <li><a href="board.html">Home</a></li>
+               <li><a href="board.html">Home</a></li> 
                <li><a href="searchmap.html">Sitemap</a></li>
             </ul>
         </div>
     </header>
     <!-- //header -->
+    
 	<!-- nav --------------------------------------------- -->
 	<nav>
 		<div class="container">
@@ -55,23 +55,21 @@
 		</div>
 	</nav>
 	<!-- //nav -->
-    <!-- section8 --------------------------------------------- -->
-    <section id="section8">
-        <div class="container">
-            <h1>뉴스</h1>
-        <div>
-            <div class="news_section">
-                <div class="news_title"><h3>재난안전 상황정보</h3></div>
-					<div class="clear"></div>
-					<!-- //section8 -->
-						<iframe src="http://127.0.0.1:5000/" width="1500" height="900" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-					<div id="back"></div>
-                </div>
-            </div>
-        </div>
+	
+	<!-- section7 --------------------------------------------- -->
+    <section id="section7">
+        
+	    <div align="center">
+	      <iframe src="shelter_map.html" width="1100" height="550" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+	    </div>
     </section>
-    <div class="clear"></div>
-    <!-- //section8 -->
-   	
+    <div class="clear">
+
+	</div>
+    <!-- //section7 -->
+    
+
+
+	
 </body>
 </html>

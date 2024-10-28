@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <title></title>
 <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 </head>
-<body  onload="myMap()">
+<body>
     <!-- header -->
     <header>
         <div class="container">
@@ -13,13 +14,12 @@
                 <a href="board.html"> <img src="image/shleter.png" width="40" height="40"> 서울시 민방위대피소 </a>
             </div>
             <ul class="sidemenu">
-               <li><a href="board.html">Home</a></li> 
+               <li><a href="board.html">Home</a></li>
                <li><a href="searchmap.html">Sitemap</a></li>
             </ul>
         </div>
     </header>
     <!-- //header -->
-    
 	<!-- nav --------------------------------------------- -->
 	<nav>
 		<div class="container">
@@ -27,7 +27,10 @@
 				<li class="dropBox">
 					<a href="">근처대피소</a>
 					<span class="dropmenu">
-						<span> <a href="searchmap.html">위치지도</a> </span>
+						<span> <a href="searchmap0.html">인구밀도</a> </span>
+						<span> <a href="searchmap1.html">대피소개수</a> </span>
+						<span> <a href="searchmap2.html">수용인원</a> </span>
+						<span> <a href="searchmap3.html">대피용수</a> </span>
 					</span>
 				</li>
 				<li class="dropBox">
@@ -52,27 +55,33 @@
 		</div>
 	</nav>
 	<!-- //nav -->
-	
-	<!-- section7 --------------------------------------------- -->
-    <section id="section7">
-        
-	    <div align="center">
-	      <iframe src="shelter_map.html" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-	    </div>
+    <!-- section8 --------------------------------------------- -->
+    <section id="section8">
+        <div class="container">
+            <h1>뉴스</h1>
+        <div>
+            <div class="news_section">
+                <div class="news_title"><h3>재난안전 상황정보</h3></div>
+					<div class="clear"></div>
+					<!-- //section8 -->
+						<iframe src="http://127.0.0.1:5000/" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+					<div id="back"></div>
+                </div>
+            </div>
+        </div>
     </section>
     <div class="clear"></div>
-    <!-- //section7 -->
-    
-    <!-- footer -->
-    <footer>    
+    <!-- //section8 -->
+   		
+    <div id="back"></div>
+
+
+    <footer>
         <div class="container">
             <div class="copyright">
                 (주) 서울 강남구 홍대입구  301호
             </div>
         </div>
     </footer>
-    <!-- //footer --> 
-
-	
 </body>
 </html>
