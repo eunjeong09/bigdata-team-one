@@ -61,30 +61,30 @@ print()
 """
  #   Column        Non-Null Count  Dtype
 ---  ------        --------------  -----
- 0   번호            18161 non-null  int64
- 1   관리번호          18161 non-null  object
- 2   지정일자          18161 non-null  object
- 3   해제일자          1092 non-null   object
- 4   운영상태          18161 non-null  object
- 5   시설명           18161 non-null  object
- 6   시설구분          18161 non-null  object
+ 0   번호                18161 non-null  int64
+ 1   관리번호            18161 non-null  object
+ 2   지정일자            18161 non-null  object
+ 3   해제일자            1092 non-null   object
+ 4   운영상태            18161 non-null  object
+ 5   시설명              18161 non-null  object
+ 6   시설구분            18161 non-null  object
  7   도로명전체주소       18147 non-null  object
  8   소재지전체주소       18161 non-null  object
  9   도로명우편번호       18139 non-null  float64
- 10  시설위치(지상/지하)   18161 non-null  object
- 11  시설면적(㎡)       18161 non-null  float64
- 12  최대수용인원        18161 non-null  int64
- 13  최종수정시점        18161 non-null  object
+ 10  시설위치(지상/지하)  18161 non-null  object
+ 11  시설면적(㎡)         18161 non-null  float64
+ 12  최대수용인원         18161 non-null  int64
+ 13  최종수정시점         18161 non-null  object
  14  데이터갱신구분       18161 non-null  object
  15  데이터갱신일자       18161 non-null  object
- 16  위도(도)         18161 non-null  int64
- 17  위도(분)         18161 non-null  int64
- 18  위도(초)         18161 non-null  float64
- 19  경도(도)         18161 non-null  int64
- 20  경도(분)         18161 non-null  int64
- 21  경도(초)         18161 non-null  float64
- 22  위도(EPSG4326)  18155 non-null  float64
- 23  경도(EPSG4326)  18155 non-null  float64
- 24  좌표정보(X)       18155 non-null  float64
- 25  좌표정보(Y)       18155 non-null  float64
+ 16  위도(도)            18161 non-null  int64
+ 17  위도(분)            18161 non-null  int64
+ 18  위도(초)            18161 non-null  float64
+ 19  경도(도)            18161 non-null  int64
+ 20  경도(분)            18161 non-null  int64
+ 21  경도(초)            18161 non-null  float64
+ 22  위도(EPSG4326)      18155 non-null  float64
+ 23  경도(EPSG4326)      18155 non-null  float64
+ 24  좌표정보(X)          18155 non-null  float64
+ 25  좌표정보(Y)          18155 non-null  float64
 """
