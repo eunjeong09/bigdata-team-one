@@ -1,73 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title></title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>비상 행동 요령</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("http://127.0.0.1:5000/insert_prevent_data")
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Data inserted successfully");
+                })
+                .catch(error => {
+                    console.error("Error inserting data:", error);
+                });
+        });
+    </script>
 </head>
-<body  onload="myMap()">
+<body onload="myMap()">
     <!-- header -->
     <header>
         <div class="container">
             <div class="logo">
-                <a href="board.html"> <img src="image/shleter.png" width="40" height="40"> 서울시 민방위대피소 </a>
+                <a href="board.html">
+                    <img src="image/shleter.png" width="40" height="40"> 서울시 민방위대피소
+                </a>
             </div>
             <ul class="sidemenu">
-               <li><a href="board.html">Home</a></li> 
-               <li><a href="searchmap.html">Sitemap</a></li>
+                <li><a href="board.html">Home</a></li>
+                <li><a href="searchmap.html">Sitemap</a></li>
             </ul>
         </div>
     </header>
     <!-- //header -->
-    
-	<!-- nav --------------------------------------------- -->
-	<nav>
-		<div class="container">
-			<ul class="leftMenu">
-				<li class="dropBox">
-					<a href="">근처대피소</a>
-					<span class="dropmenu">
-						<span> <a href="searchmap1.html">대피소개수</a> </span>
-						<span> <a href="searchmap0.html">인구밀도</a> </span>
-						<span> <a href="searchmap2.html">수용인원</a> </span>
-						<span> <a href="searchmap3.html">대피용수</a> </span>
-					</span>
-				</li>
-				<li class="dropBox">
-					대피소 차트 
-					<span class="dropmenu"> 
-						<span><a href="chart.html">대피소 차트</a></span> 
-					</span>
-				</li>
-				<li class="dropBox">
-					실시간전황 
-					<span class="dropmenu"> 
-						<span><a href="news.html">재난 상황정보 </a></span> 
-					</span>
-				</li>
-				<li class="dropBox">
-					데이터베이스 관리 
-					<span class="dropmenu"> 
-						<span><a href="table.html">비상행동요령</a></span> 
-					</span>
-				</li>
-			</ul>
-		</div>
-	</nav>
-	<!-- //nav -->
-	
-	<!-- section7 --------------------------------------------- -->
+
+    <!-- nav -->
+    <nav>
+        <div class="container">
+            <ul class="leftMenu">
+                <li class="dropBox"><a href="">근처대피소</a>
+                    <span class="dropmenu">
+                        <span><a href="searchmap1.html">대피소개수</a></span>
+                        <span><a href="searchmap0.html">인구밀도</a></span>
+                        <span><a href="searchmap2.html">수용인원</a></span>
+                        <span><a href="searchmap3.html">대피용수</a></span>
+                    </span>
+                </li>
+                <li class="dropBox">대피소 차트
+                    <span class="dropmenu">
+                        <span><a href="chart.html">대피소 차트</a></span>
+                    </span>
+                </li>
+                <li class="dropBox">실시간전황
+                    <span class="dropmenu">
+                        <span><a href="news.html">재난 상황정보</a></span>
+                    </span>
+                </li>
+                <li class="dropBox">데이터베이스 관리
+                    <span class="dropmenu">
+                        <span><a href="table.html">비상행동요령</a></span>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- //nav -->
+
+    <!-- section7 -->
     <section id="section7">
-	    <div align="center">
-			<img src="image\EDR.png" alt="">
-			<img src="image\prevent_table.png" alt="">
-		</div>         
+        <div align="center">
+            <img src="image/EDR.png" alt="">
+            <img src="image/prevent_table.png" alt="">
+        </div>
     </section>
     <div class="clear"></div>
     <!-- //section7 -->
-    
- 
-    
-	
 </body>
 </html>
